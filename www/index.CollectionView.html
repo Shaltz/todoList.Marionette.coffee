@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<!-- templates -->
+		<script id="formView" type="text/x-handlebars-template">
+			Task à effectuer : <input type="text" id="taskName" />
+			<button id="doIt">Fait le</button>
+		</script>
+
+		<script id="TaskView" type="text/x-handlebars-template">
+			<p><a href="#" class="del">✗</a>{{nom}}</p>
+		</script>
+
+		<script id="noTaskView" type="text/x-handlebars-template">
+			<p>"Y'a rien à faire!!"</p>
+		</script>
+
+	</head>
+
+	<body>
+
+	<div id='form'></div>
+	<div id='liste'></div>
+
+	<script src="coffee-script.js"></script>
+
+	<script src="jquery.js"></script>
+	<script src="underscore.js"></script>
+	<script src="backbone.js"></script>
+	<script src="backbone.marionette.js"></script>
+	<script src="handlebars.js"></script>
+
+	<script type="text/coffeescript" src="todolistClient.CollectionView.coffee"></script>
+
+	</body>
+</html>

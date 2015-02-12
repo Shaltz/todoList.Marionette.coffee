@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+	<!-- templates -->
+
+		<script id="formView" type="text/x-handlebars-template">
+			Task à effectuer : <input type="text" id="taskName" />
+			<button id="doIt">Fait le</button>
+
+			<div id="list"></div>
+		</script>
+
+		<!-- handlebars template sinon {{nom}} pas interprété -->
+		<script id="TaskView" type="text/x-handlebars-template">
+			<p><a href="#" class="del">✗</a>{{nom}}</p>
+		</script>
+
+		<!-- normal template car pas besoin d interprétation -->
+		<script id="noTaskView" type="text/template">
+			<p>"Y'a rien à faire!!"</p>
+		</script>
+	<!-- /templates -->
+
+		<style type="text/css">
+
+			body {
+				color: white;
+			}
+
+			.region {
+				background-color: red;
+				padding: 3px;
+				margin: 3px;
+			}
+
+			.view {
+				background-color: blue;
+				padding: 3px;
+				margin: 3px;
+			}
+
+			.child {
+				background-color: green;
+			}
+
+			.composite {
+				background-color: yellow;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+	<div id='content' class="region"></div>
+
+	<script src="coffee-script.js"></script>
+
+	<script src="jquery.js"></script>
+	<script src="underscore.js"></script>
+	<script src="backbone.js"></script>
+	<script src="backbone.marionette.js"></script>
+	<script src="handlebars.js"></script>
+
+	<script type="text/coffeescript" src="todolistClient.CompositeView.coffee"></script>
+
+	</body>
+</html>

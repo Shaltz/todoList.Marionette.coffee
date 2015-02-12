@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<script id='formulaire' type="text/template">
+			<input type="text" id='defTache'></input>
+			<button type='submit' id='doIt'>clickMe</button>
+			<br>
+			<div id='liste'></div>
+		</script>
+
+		<script id='tache' type="text/x-handlebars-template">
+			<p><button>X</button>{{nom}}</p>
+		</script>
+
+		<script id='rien' type="text/template">
+			<p>Rien à faire</p>
+		</script>
+
+	</head>
+
+	<body>
+
+	<div id="reserve"></div>
+
+	<script src="coffee-script.js"></script>
+
+	<script src="jquery.js"></script>
+	<script src="underscore.js"></script>
+	<script src="backbone.js"></script>
+	<script src="backbone.marionette.js"></script>
+	<script src="handlebars.js"></script>
+
+	<script type="text/coffeescript" src="todolistClient.coffee"></script>
+
+	</body>
+</html>
